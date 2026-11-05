@@ -56,14 +56,14 @@ services:
       STT_URL: http://sidecar:8000
       DATA_DIR: /data
       WEB_UI: "1"
-      WEB_UI_PORT: "3100"
+      WEB_UI_PORT: "3000"
       WEB_UI_HOST: 0.0.0.0
     volumes:
       # SQLite db + per-meeting audio.
       - parley-data:/data
     # Dashboard reachable at http://127.0.0.1:3000 on the HOST only.
     ports:
-      - "127.0.0.1:3100:3000"
+      - "3100:3000"
 
 volumes:
   parley-data:
