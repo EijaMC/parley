@@ -58,6 +58,7 @@ services:
       WEB_UI: "1"
       WEB_UI_PORT: "3000"
       WEB_UI_HOST: 0.0.0.0
+      OLLAMA_URL: ${OLLAMA_URL:-http://127.0.0.1:11434}
     volumes:
       # SQLite db + per-meeting audio.
       - parley-data:/data
